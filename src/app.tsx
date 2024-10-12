@@ -3,23 +3,6 @@ import { Breadcrumb, Layout, Menu, theme } from 'antd';
 import routes from '../router'
 const { Header, Content, Footer, Sider } = Layout;
 
-
-function getItem(
-  label: React.ReactNode,
-  key: React.Key,
-  icon?: React.ReactNode,
-  children?: MenuItem[],
-): MenuItem {
-  return {
-    key,
-    icon,
-    children,
-    label,
-  } as MenuItem;
-}
-
-
-
 const App: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
   const {
