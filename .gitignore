@@ -1,0 +1,4 @@
+# 可以使用通配符匹配对应文件及目录
+# 生成配置地址：https://www.toptal.com/developers/gitignore
+node_modules/
+dist/
