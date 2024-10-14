@@ -1,7 +1,17 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*" // 在webpack中设置不好使了
+      ]
+    },
     "target": "ESNext",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
     "allowJs": false,
     "skipLibCheck": false,
     "esModuleInterop": false,
@@ -12,8 +22,13 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
     "noEmit": true,
-    "jsx": "react", // react18这里也可以改成react-jsx
+    "jsx": "react-jsx",// react18这里也可以改成react-jsx, 使用react会使tsx报红提示（引入React）
   },
-  "include": ["./src"]
+  "include": [
+    "src"
+  ]
 }
