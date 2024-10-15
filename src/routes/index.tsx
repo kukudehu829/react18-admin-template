@@ -23,13 +23,8 @@ const Dashboard = lazy(() => import('../pages/dashboard'))
 // const Gold = lazy(() => import('@/pages/product/luxury/gold'))
 
 const menuRoutes: MenuRoute[] = [
-  // {
-  //   path: '/',
-  //   element: <Navigate replace to="/home" />
-  // },
   {
     path: '/',
-    // loader: checkAuth,
     element: <AdminLayout />, // layout应该不需要lazyload 后续考虑SSR?
     children: [
       {
@@ -38,73 +33,20 @@ const menuRoutes: MenuRoute[] = [
         icon: <DesktopOutlined />,
         element: <Dashboard />
       },
-      // {
-      //   name: '表格',
-      //   path: '/table',
-      //   icon: <TableOutlined />,
-      //   children: [
-      //     {
-      //       name: 'table-pro',
-      //       path: '/table/table-pro',
-      //       element: <TablePro />
-      //     },
-      //     {
-      //       name: 'table-antd',
-      //       path: '/table/table-antd',
-      //       element: <TableAntd />
-      //     },
-      //     {
-      //       name: 'table-ahook',
-      //       path: '/table/table-ahook',
-      //       element: <TableAhook />
-      //     }
-      //   ]
-      // },
-      // {
-      //   name: '演练场',
-      //   path: '/playground',
-      //   icon: <MailOutlined />,
-      //   children: [
-      //     {
-      //       name: '路由测试和redux',
-      //       path: '/playground',
-      //       // index: true,
-      //       element: <Playground />
-      //     }
-      //   ]
-      // },
-      // {
-      //   name: '物品',
-      //   path: '/product',
-      //   icon: <AppstoreOutlined />,
-      //   children: [
-      //     {
-      //       index: true,
-      //       name: '手机',
-      //       auth: false,
-      //       path: '/product/phone',
-      //       element: <Phone />
-      //     },
-      //     {
-      //       name: '奢侈品',
-      //       path: '/product/scp',
-      //       children: [
-      //         {
-      //           name: '黄金',
-      //           path: '/product/scp/gold',
-      //           element: <Gold />
-      //         }
-      //       ]
-      //     }
-      //   ]
-      // }
+      {
+        name: 'Vue',
+        path: '/vue',
+        children: [
+          {
+            name: '子应用1',
+            path: '/vue/app1',
+            icon: <TableOutlined />,
+            element: <Dashboard />
+          },
+        ],
+      },
     ]
   },
-  // {
-  //   path: '/login',
-  //   loader: checkAuth,
-  //   element: <LoginPage />
-  // },
   // {
   //   path: '*',
   //   element: <NotFound />
@@ -165,9 +107,9 @@ const extractRoutes = (menuRoutes: MenuRoute[]) => {
   return recurExtractRoutes(menuRoutes, [])
 }
 
-const { menuItems, breadcrumbNameMap } = extractMenuItems(menuRoutes[1]?.children)
+const { menuItems, breadcrumbNameMap } = extractMenuItems(menuRoutes[0]?.children)
 console.log('menuItems', menuItems, 'breadcrumbNameMap', breadcrumbNameMap)
 const routes = extractRoutes(menuRoutes)
 console.log('routes', routes)
 
-export { breadcrumbNameMap, menuItems, routes, menuRoutes }
+export { breadcrumbNameMap, menuItems, routes }

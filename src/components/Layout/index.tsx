@@ -5,7 +5,7 @@ import { Navigate,NavLink, Outlet, useLoaderData, useLocation, useMatches } from
 import Loading from '../Loading'
 
 // import { useEmotionCss } from '../hooks'
-import { menuItems, menuRoutes } from '../../routes'
+import { menuItems } from '../../routes'
 import Header from './header'
 
 const { Content, Sider } = Layout
@@ -54,14 +54,7 @@ export default function AdminLayout() {
           theme="dark"
           mode="inline"
           style={{ height: 'calc(100vh - 48px)' }}
-          items={menuRoutes[0].children.map((item) => {
-            return {
-              key: item.path,
-              label: <NavLink to={item.path}>{item.name}</NavLink>,
-              // disabled: item.disabled,
-              // icon: item.icon,
-            };
-          })}
+          items={menuItems}
           selectedKeys={selectedKeys}
           defaultOpenKeys={defaultOpenKeys}
         />
@@ -71,6 +64,7 @@ export default function AdminLayout() {
         {/* <Content className={layoutContentClassName}> */}
         <Content>
           <Suspense fallback={<Loading />}>
+            {/* Outlet 嵌套路由入口*/}
             <Outlet />
           </Suspense>
         </Content>

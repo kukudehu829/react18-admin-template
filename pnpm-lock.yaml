@@ -11,6 +11,9 @@ dependencies:
   antd:
     specifier: ^5.21.3
     version: 5.21.3(react-dom@18.3.1)(react@18.3.1)
+  mockjs:
+    specifier: ^1.1.0
+    version: 1.1.0
   react:
     specifier: ^18.3.1
     version: 18.3.1
@@ -2400,7 +2403,6 @@ packages:
   /commander@10.0.1:
     resolution: {integrity: sha512-y4Mg2tXshplEbSGzx7amzPwKKOCGuoSRP/CjEdwwk0FOGlUbq6lKuoyDZTNZkmxHdJtp54hdfY/JUrdL7Xfdug==}
     engines: {node: '>=14'}
-    dev: true
 
   /commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
@@ -3485,6 +3487,13 @@ packages:
     resolution: {integrity: sha512-UZ7eQ+h8ywIRAW1hIEl2AqdwzJucU/Kp59+8kkZeSvafXhZjul247BvIJjEVFVeON6d7lM46XX1HXCduKAS8VA==}
     engines: {node: '>=16 || 14 >=14.17'}
     dev: true
+
+  /mockjs@1.1.0:
+    resolution: {integrity: sha512-eQsKcWzIaZzEZ07NuEyO4Nw65g0hdWAyurVol1IPl1gahRwY+svqzfgfey8U8dahLwG44d6/RwEzuK52rSa/JQ==}
+    hasBin: true
+    dependencies:
+      commander: 10.0.1
+    dev: false
 
   /ms@2.0.0:
     resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}

@@ -68,7 +68,8 @@ export default function AdminLayout() {
         height: 48,
         padding: '0px 16px',
         display: 'flex',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        background: '#f99'
       }}
     >
       <Row align="middle">
