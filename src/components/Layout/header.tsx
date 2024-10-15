@@ -1,7 +1,6 @@
 import { LogoutOutlined, SettingOutlined, UserOutlined } from '@ant-design/icons'
 import { Breadcrumb, Button, Dropdown, MenuProps, Row, Space } from 'antd'
 import { Link, Navigate, useLoaderData, useLocation, useNavigate } from 'react-router-dom'
-import React from 'react'
 
 // import Theme from '@/features/theme/theme'
 

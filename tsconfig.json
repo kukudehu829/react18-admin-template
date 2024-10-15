@@ -3,7 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "src/*" // 在webpack中设置不好使了
+        "src/*" // 在webpack中设置不好使
       ]
     },
     "target": "ESNext",

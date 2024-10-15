@@ -1,4 +1,3 @@
-import React from 'react';
 import { ConfigProvider } from 'antd'
 import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom'
 

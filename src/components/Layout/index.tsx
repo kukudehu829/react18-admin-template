@@ -21,12 +21,6 @@ export default function AdminLayout() {
   const defaultOpenKeys = useMemo(() => {
     return matches.slice(1, -1).map((item) => item.pathname)
   }, [matches])
-  const menuItems = [
-    {
-      label: 'home',
-      key: '/home',
-    }
-  ];
   
   // const logoTextClassName = useEmotionCss(({ token }) => ({
   //   color: token.colorWhite,
@@ -52,7 +46,6 @@ export default function AdminLayout() {
         collapsible
         onCollapse={(value) => setCollapsed(value)}
       >
-        323233
         {/* <Row justify="center" className={logoTextClassName}> */}
         <Row justify="center">
           {collapsed ? 'React' : 'React Admin'}
@@ -61,10 +54,10 @@ export default function AdminLayout() {
           theme="dark"
           mode="inline"
           style={{ height: 'calc(100vh - 48px)' }}
-          items={menuItems.map((item) => {
+          items={menuRoutes[0].children.map((item) => {
             return {
-              key: item.key,
-              label: <NavLink to={item.key}>{item.label}</NavLink>,
+              key: item.path,
+              label: <NavLink to={item.path}>{item.name}</NavLink>,
               // disabled: item.disabled,
               // icon: item.icon,
             };

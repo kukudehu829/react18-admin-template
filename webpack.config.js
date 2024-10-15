@@ -17,6 +17,7 @@ module.exports = {
     },
     compress: true, // 开启压缩
     port: 9000,
+    historyApiFallback: true, // 解决createBrowserRouter路由手动刷新404问题
     open: true, // 启动后打开浏览器
   },
   module: {

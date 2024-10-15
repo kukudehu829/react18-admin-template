@@ -30,13 +30,11 @@ const menuRoutes: MenuRoute[] = [
   {
     path: '/',
     // loader: checkAuth,
-    key: 'layout',
     element: <AdminLayout />, // layout应该不需要lazyload 后续考虑SSR?
     children: [
       {
         name: '首页',
         path: '/home',
-        key: 'home',
         icon: <DesktopOutlined />,
         element: <Dashboard />
       },
