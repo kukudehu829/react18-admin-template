@@ -3,7 +3,7 @@
     "dev": "cross-env NODE_ENV=development BASE_ENV=development webpack-dev-server --config webpack.config.js",
     "build": "webpack --config webpack.config.js --mode=production",
     "build:prod": "cross-env NODE_ENV=production BASE_ENV=production webpack -c build/webpack.prod.js",
-    "predeploy": "npm run build" , 
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {

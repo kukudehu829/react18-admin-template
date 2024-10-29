@@ -48,7 +48,7 @@ export default function AdminLayout() {
       >
         {/* <Row justify="center" className={logoTextClassName}> */}
         <Row justify="center">
-          {collapsed ? 'React' : 'React Admin'}
+          {collapsed ? 'Admin' : 'Admin Template'}
         </Row>
         <Menu
           theme="dark"

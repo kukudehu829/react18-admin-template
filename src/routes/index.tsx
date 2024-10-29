@@ -12,6 +12,8 @@ import { BreadcrumbMap, MenuItem, MenuRoute, RoutesType } from './interface'
 // https://legacy.reactjs.org/docs/code-splitting.html#route-based-code-splitting
 // home
 const Dashboard = lazy(() => import('../pages/dashboard'))
+const Login = lazy(() => import('../pages/Login'))
+
 // table
 // const TablePro = lazy(() => import('@/pages/table/table-pro'))
 // const TableAntd = lazy(() => import('@/pages/table/table-antd'))
@@ -46,6 +48,12 @@ const menuRoutes: MenuRoute[] = [
         ],
       },
     ]
+  },
+  {
+    name: '登录',
+    path: '/login',
+    icon: <DesktopOutlined />,
+    element: <Login />
   },
   // {
   //   path: '*',
