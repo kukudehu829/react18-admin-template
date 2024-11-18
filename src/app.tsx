@@ -7,7 +7,7 @@ import { routes } from './routes'
 // import { useAppSelector } from './store'
 
 export default function App() {
-  const createdRoutes = createBrowserRouter(routes)
+  const createdRoutes = createHashRouter(routes)
 
   // const primaryColor = useAppSelector(themeColor)
 
