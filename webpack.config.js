@@ -10,7 +10,7 @@ module.exports = {
     filename: 'static/js/[name].js', // 每个输出js的名称
     path: path.join(__dirname, 'dist'), // 打包结果输出路径
     clean: true, // webpack4需要配置clean-webpack-plugin来删除dist文件,webpack5内置了
-    publicPath: '/' // 打包后文件的公共前缀路径
+    publicPath: process.env.NODE_ENV == 'development' ? '/' : './' // 打包后文件的公共前缀路径
   },
   devServer: {
     static: {
