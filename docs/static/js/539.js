@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[539],{539:(e,n,s)=>{s.r(n),s.d(n,{default:()=>l});var t=s(337),c=s(543),u=s(2577),h=s(6070);const l=function(){var e=(0,c.Zp)();return(0,h.jsx)("div",{children:(0,h.jsx)(t.Ay,{onClick:function(){u.JZ.push({name:"test",path:"/test"}),console.log(u.JZ,"????1111"),e("/home")},children:"登录"})})}}}]);

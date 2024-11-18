@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: path.join(__dirname, 'src/index.tsx'), // 入口文件
@@ -71,12 +72,22 @@ module.exports = {
     extensions: ['.js', '.tsx', '.ts'],
   },
   plugins: [
+    new CopyWebpackPlugin({
+			patterns: [{
+				from:  path.resolve(__dirname, "public/favicon.ico"),//当前工作路径是在dist文件夹内，搜易这里的from就是项目目录/public文件夹内。（dist和public是同级的）
+				to: './',//放到output文件夹下，也就是当前工作文件夹dist内
+				globOptions: {
+					dot: true,
+					gitignore: true
+				}
+			}]
+		}),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public/index.html'), // 模板取定义root节点的模板
       inject: true, // 自动注入静态资源
     }),
     new webpack.DefinePlugin({
       'process.env.BASE_ENV': JSON.stringify(process.env.BASE_ENV)
-    })
-  ]
+    }),
+  ] 
 }
